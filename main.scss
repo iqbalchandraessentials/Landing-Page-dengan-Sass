@@ -1,0 +1,159 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+
+
+// variable warna
+$primary-color: rgb(145, 17, 219);
+$secondary-color: rgb(253, 231, 36);
+$tri-color: rgb(0, 225, 255);
+$text-color: rgb(20, 20, 20);
+
+// style
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(img/bg.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 70vmax;
+    // vmax adalah ukuran yang mengikuti lebar layar contoh bila 50vmax maka akan setengah layar hasil nya
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+
+    &::before {
+        content: "";
+        // background-image: url(img/bg.png);
+        // background-position: top right;
+        // background-repeat: no-repeat;
+        // background-size: 70vmax;
+        // // vmax adalah ukuran yang mengikuti lebar layar contoh bila 50vmax maka akan setengah layar hasil nya
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
+        // opacity: 1;
+    }
+
+    @media screen and(max-widht: 992px) {
+        background: none;
+    }
+
+}
+
+
+// navbar
+.customNav {
+    .navbar-brand {
+        img {
+            width: 60px;
+            transform: rotate(0deg);
+            transition: 0.5s ease;
+
+            &:hover {
+                transform: rotate(180deg);
+            }
+
+            &:active {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    #navbarNavDropdown {
+
+        .navbar-nav {
+
+            .nav-item {
+                .nav-link {
+                    color: $primary-color;
+                    font-weight: 500;
+                    margin-left: 3em;
+                    transition: .3s color ease;
+
+                    &:hover {
+                        color: darken($primary-color, 50%);
+                    }
+                }
+
+                .contactus {
+                    background-color: $secondary-color;
+                    color: darken($primary-color, 50%);
+                    border-radius: 2em;
+                    border: 0;
+                    padding-left: 1.5em;
+                    padding-right: 1.5em;
+                    transition: .3s;
+
+                    &:hover {
+                        color: $primary-color;
+                        background-color: $tri-color;
+                        // border: 1px solid $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and(max-widht: 992px) {
+        margin-top: -1em;
+
+        .nav-link {
+            text-align: center;
+            justify-content: center;
+        }
+
+    }
+
+}
+
+
+
+// custom section
+
+.custom-section {
+    margin-top: 7.5em;
+
+    .title {
+        color: $primary-color;
+        margin-bottom: -10px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $text-color;
+    }
+
+    .title, h2, p {
+        transform: translateY(0px);
+        transition: 0.6s;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+
+
+    .joinUs {
+        display: inline-block;
+        color: white;
+        background-color: $primary-color;
+        border-radius: 2em;
+        padding: 0.5em 2em;
+        text-decoration: none;
+        cursor: pointer;
+        transition: .5s ease;
+
+        &:hover {
+            color: darken($primary-color, 50%);
+            border: 1px solid$primary-color;
+            background-color: transparent;
+        }
+    }
+
+
+}

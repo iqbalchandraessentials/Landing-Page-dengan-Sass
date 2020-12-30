@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(img/bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 70vmax;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+body::before {
+  content: "";
+}
+@media screen and (max-widht: 992px) {
+  body {
+    background: none;
+  }
+}
+
+.customNav .navbar-brand img {
+  width: 60px;
+  transform: rotate(0deg);
+  transition: 0.5s ease;
+}
+.customNav .navbar-brand img:hover {
+  transform: rotate(180deg);
+}
+.customNav .navbar-brand img:active {
+  transform: rotate(360deg);
+}
+.customNav #navbarNavDropdown .navbar-nav .nav-item .nav-link {
+  color: #9111db;
+  font-weight: 500;
+  margin-left: 3em;
+  transition: 0.3s color ease;
+}
+.customNav #navbarNavDropdown .navbar-nav .nav-item .nav-link:hover {
+  color: black;
+}
+.customNav #navbarNavDropdown .navbar-nav .nav-item .contactus {
+  background-color: #fde724;
+  color: black;
+  border-radius: 2em;
+  border: 0;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  transition: 0.3s;
+}
+.customNav #navbarNavDropdown .navbar-nav .nav-item .contactus:hover {
+  color: #9111db;
+  background-color: #00e1ff;
+}
+@media screen and (max-widht: 992px) {
+  .customNav {
+    margin-top: -1em;
+  }
+  .customNav .nav-link {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.custom-section {
+  margin-top: 7.5em;
+}
+.custom-section .title {
+  color: #9111db;
+  margin-bottom: -10px;
+}
+.custom-section h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: #141414;
+}
+.custom-section .title, .custom-section h2, .custom-section p {
+  transform: translateY(0px);
+  transition: 0.6s;
+}
+.custom-section .title:hover, .custom-section h2:hover, .custom-section p:hover {
+  transform: translateY(-10px);
+}
+.custom-section .joinUs {
+  display: inline-block;
+  color: white;
+  background-color: #9111db;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.custom-section .joinUs:hover {
+  color: black;
+  border: 1px solid #9111db;
+  background-color: transparent;
+}
+/*# sourceMappingURL=main.css.map */
